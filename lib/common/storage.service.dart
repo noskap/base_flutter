@@ -1,9 +1,9 @@
 import 'package:hive_flutter/hive_flutter.dart';
 
-enum MirraHiveBoxes {
+enum BingusBongusHiveBoxes {
   defaultBox('default');
 
-  const MirraHiveBoxes(this.path);
+  const BingusBongusHiveBoxes(this.path);
 
   final String path;
 
@@ -14,11 +14,11 @@ enum MirraHiveBoxes {
 class StorageService {
   Future<void> init() async {
     // StorageService().registerAdapters();
-    await Hive.openBox(MirraHiveBoxes.defaultBox.path);
+    await Hive.openBox(BingusBongusHiveBoxes.defaultBox.path);
   }
 
   Box _getDefaultBox() {
-    return Hive.box(MirraHiveBoxes.defaultBox.path);
+    return Hive.box(BingusBongusHiveBoxes.defaultBox.path);
   }
 
   T _get<T>(String path) {

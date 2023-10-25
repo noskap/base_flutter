@@ -1,4 +1,4 @@
-name: base_flutter
+name: bingus_bongus
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -17,6 +17,10 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
+
+scripts:
+  gen: flutter pub run build_runner build --delete-conflicting-outputs
+  update_launcher_icons: flutter pub run icons_launcher:create
 
 environment:
   sdk: '>=3.1.0 <4.0.0'
@@ -49,17 +53,19 @@ dependencies:
   json_annotation: ^4.8.1
   retrofit: ^4.0.1
   url_launcher: ^6.1.11
+  google_fonts: ^5.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  build_runner: ^2.3.3
+  flutter_lints: ^2.0.1
+  freezed: ^2.3.2
+  hive_generator: ^2.0.0
+  icons_launcher: ^2.1.0
+  json_serializable: ^6.6.1
+  retrofit_generator: ^7.0.1
+  envied_generator: ^0.3.0+3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

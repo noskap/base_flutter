@@ -1,4 +1,4 @@
-package com.example.base_flutter
+package com.example.bingus_bongus
 
 import io.flutter.embedding.android.FlutterActivity
 

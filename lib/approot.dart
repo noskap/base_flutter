@@ -7,8 +7,8 @@ class AppRoot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     FirebaseAuth.instance.signInAnonymously();
-    return const Scaffold(
-      // appBar: ChAppBar(),
+    return Scaffold(
+      appBar: AppBar(),
       // drawer: ChDrawer(),
       body: Text('Body'),
     );
